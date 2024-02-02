@@ -1,4 +1,48 @@
 # CWC-Caner-Weather-Channel
 Caner Weather Channel (CWC) is a weather website and application designed and developed by Caner HK. You can visit cwc on https://weather.caner.hk/
 
-Please read LICENSE before using release and pre-release files
+>Please read LICENSE before using release and pre-release files
+
+## CWC Overview
+__Core logic:__
+
+1. Request the PHP file of the API key, request the function file.
+
+   `example: require './path/to/apikey.php';
+    include './path/to/functions.php';`
+2. then use [ipinfo.io](https://ipinfo.io/) to obtain the user IP through the back-end PHP code, use Google Maps Platform to convert the IP into latitude and longitude.
+  
+   `example:
+   function getLocationByIP() {
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+        return $details->city;
+    }`
+ 
+   (_After the dom is loaded, the longitude and latitude are obtained through JavaScript location information. If agreed, the location information obtained by JavaScript will be changed to re-request._)
+        `example: var currentLocation = window.location.search;
+        if (!currentLocation.includes("location=")) {
+            if (navigator.geolocation) {
+                var options = {
+                    enableHighAccuracy: true,
+                    timeout: 10000,
+                    maximumAge: 0
+                };
+                navigator.geolocation.getCurrentPosition(showPosition, showError, options);
+            }
+        }
+    };`
+ 
+3. Then confirm the request by judging the JSON data in the cookies  unit & language ,etc.
+4. Then build the request URL (using curl_request) and store the requested data in various variables.
+
+   `example: $TheUrlOfGetWeatherJson = "https://api.example.com/wearher/3.0/get?lat=40.4573&lon=-0.3425&lang=en&apikey=123456789&units=imperial";`
+6.After requesting the data, you can add an if isset to confirm whether the weather data has been obtained and prepare error information for the error page.
+7. Then determine the description text of various weather conditions through functions.Here you can convert the returned weather data into more understandable text to help users read.
+8. Through `<?php echo ?>` in html.  Show corresponding weather data.Also you need write some css classes and make some components to beautify the page.
+
+__The above describes how to obtain weather data and how to display weather data, which is the core logic of CWC (the displayed code is modified from the source code).__
+
+
+
+
