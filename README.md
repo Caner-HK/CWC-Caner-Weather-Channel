@@ -48,7 +48,7 @@ __html&css:__
 
 We use flat and minimalist styles to design the front-end style. Right-angled borders, solid borders, window transition animations and press-and-hold transition animations are all features of CWC.
 
-`    .cwc-btn {
+`example: .cwc-btn {
       border-radius: 0px !important;
       border: 1px solid black;
       height: 36px;
@@ -67,8 +67,13 @@ We use flat and minimalist styles to design the front-end style. Right-angled bo
       background-color: black;
       color: white;
     }`
+    
 `example:<iframe id="gameFrame" src="https://resource.caner.hk/get/game/dino/dino_with_title.html" height="200px" frameborder="0" scrolling="no" allowfullscreen class="cwc-game"></iframe>
         <button id="gameButton" class="cwc-btn">玩 Chrome Dino 消遣一下</button>`
+
+__screenshot:__
+![Screenshot_20240203-041737_Caner_Weather](https://github.com/iMallpa/CWC-Caner-Weather-Channel/assets/104821296/bea0e167-b817-49bb-8bec-9bc9726cbb32)
+
 
 ## Function:
 - [x] Weather query and display
