@@ -44,6 +44,20 @@ __Core logic:__
 
 __The above describes how to obtain weather data and how to display weather data, which is the core logic of CWC (the displayed code is modified from the source code).__
 
+## Function:
+- [x] Weather query and display
+- [x] Location search suggestions
+- [x] Google Maps and Map pin 📍
+- [x] Weather data chart
+- [x] Set units and save units
+- [x] Cookies management
+- [x] Diverse data display
+- [x] Error handling function
+- [ ] multi-language
+- [ ] Recommendations provided by GPT3.5
+- [ ] star city
+- [ ] Personal information display
+- [ ] Large screen adaptation
 
 
 
