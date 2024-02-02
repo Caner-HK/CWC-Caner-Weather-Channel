@@ -1,4 +1,5 @@
 # CWC-Caner-Weather-Channel
+   <img style="height: 42px;" src="https://resource.caner.hk/get/logo/caner-logo-white.png">
 Caner Weather Channel (CWC) is a weather website and application designed and developed by Caner HK. You can visit cwc on https://weather.caner.hk/
 
 >Please read LICENSE before using release and pre-release files
@@ -10,7 +11,7 @@ __Core logic:__
 
    `example: require './path/to/apikey.php';
     include './path/to/functions.php';`
-2. then use [ipinfo.io](https://ipinfo.io/) to obtain the user IP through the back-end PHP code, use Google Maps Platform to convert the IP into latitude and longitude.
+2. then use [ipinfo.io](https://ipinfo.io/) to obtain the user IP through the back-end PHP code, use [Google Maps Platform](https://mapsplatform.google.com/) to convert the IP into latitude and longitude.
   
    `example:
    function getLocationByIP() {
@@ -19,7 +20,7 @@ __Core logic:__
         return $details->city;
     }`
  
-   (_After the dom is loaded, the longitude and latitude are obtained through JavaScript location information. If agreed, the location information obtained by JavaScript will be changed to re-request._)
+   (_After the dom is loaded, the longitude and latitude are obtained through JavaScript location information. If agreed, the location information obtained by JavaScript will be changed to re-request._
         `example: var currentLocation = window.location.search;
         if (!currentLocation.includes("location=")) {
             if (navigator.geolocation) {
@@ -31,7 +32,7 @@ __Core logic:__
                 navigator.geolocation.getCurrentPosition(showPosition, showError, options);
             }
         }
-    };`
+    };`)
  
 3. Then confirm the request by judging the JSON data in the cookies  unit & language ,etc.
 4. Then build the request URL (using curl_request) and store the requested data in various variables.
