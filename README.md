@@ -44,6 +44,32 @@ __Core logic:__
 
 __The above describes how to obtain weather data and how to display weather data, which is the core logic of CWC (the displayed code is modified from the source code).__
 
+__html&css:__
+
+We use flat and minimalist styles to design the front-end style. Right-angled borders, solid borders, window transition animations and press-and-hold transition animations are all features of CWC.
+
+`    .cwc-btn {
+      border-radius: 0px !important;
+      border: 1px solid black;
+      height: 36px;
+      width: 297px;
+      font-size: 14px;
+      transition: background-color 0.3s, border-color 0.3s;
+      background-color: transparent;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      margin-bottom: 5px;
+    }
+    .cwc-btn:hover {
+      background-color: black;
+      color: white;
+    }`
+`example:<iframe id="gameFrame" src="https://resource.caner.hk/get/game/dino/dino_with_title.html" height="200px" frameborder="0" scrolling="no" allowfullscreen class="cwc-game"></iframe>
+        <button id="gameButton" class="cwc-btn">玩 Chrome Dino 消遣一下</button>`
+
 ## Function:
 - [x] Weather query and display
 - [x] Location search suggestions
@@ -58,6 +84,11 @@ __The above describes how to obtain weather data and how to display weather data
 - [ ] star city
 - [ ] Personal information display
 - [ ] Large screen adaptation
+- [ ] Switch map service provider
+- [ ] Dt and historical weather
+- [ ] snackbar operation suggestions
+
+
 
 
 
