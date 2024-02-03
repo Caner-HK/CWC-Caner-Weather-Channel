@@ -1,76 +1,113 @@
-# CWC-Caner-Weather-Channel
+# Caner Weather Channel (CWC)
 
-Caner Weather Channel (CWC) is a weather website and application designed and developed by Caner HK. You can visit cwc on https://weather.caner.hk/
+Caner Weather Channel (CWC) is a comprehensive weather website and application developed by Caner HK. For more information and to access the service, visit [CWC](https://weather.caner.hk/).
 
->Please read LICENSE before using release and pre-release files
+**Please ensure you read the LICENSE document before using any release and pre-release files.**
 
 ## CWC Overview
-__Core logic:__
 
-1. Request the PHP file of the API key, request the function file.
+### Core Logic:
 
-   `example: require './path/to/apikey.php';
-    include './path/to/functions.php';`
-2. then use [ipinfo.io](https://ipinfo.io/) to obtain the user IP through the back-end PHP code, use [Google Maps Platform](https://mapsplatform.google.com/) to convert the IP into latitude and longitude.
-  
-   `example:
+The core functionality of CWC involves several steps to fetch and display weather data:
+
+1. **API Key and Functions Importation:**
+   Begin by including the necessary PHP files for the API key and functions.
+   ```php
+   require './path/to/apikey.php';
+   include './path/to/functions.php';
+   ```
+
+2. **Obtaining User Location:**
+   Utilize [ipinfo.io](https://ipinfo.io/) to determine the user's IP address in the backend PHP code, and then use the [Google Maps Platform](https://mapsplatform.google.com/) to convert this IP into latitude and longitude coordinates.
+   ```php
    function getLocationByIP() {
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
-        return $details->city;
-    }`
- 
-   (_After the dom is loaded, the longitude and latitude are obtained through JavaScript location information. If agreed, the location information obtained by JavaScript will be changed to re-request._
-        `example: var currentLocation = window.location.search;
-        if (!currentLocation.includes("location=")) {
-            if (navigator.geolocation) {
-                var options = {
-                    enableHighAccuracy: true,
-                    timeout: 10000,
-                    maximumAge: 0
-                };
-                navigator.geolocation.getCurrentPosition(showPosition, showError, options);
-            }
-        }
-    };`)
- 
-3. Then confirm the request by judging the JSON data in the cookies  unit & language ,etc.
-4. Then build the request URL (using curl_request) and store the requested data in various variables.
+       $ip = $_SERVER['REMOTE_ADDR'];
+       $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+       return $details->city;
+   }
+   ```
+   After the DOM is loaded, longitude and latitude are obtained through JavaScript location information. If permission is granted, the location information obtained through JavaScript will update the request.
+   ```javascript
+   var currentLocation = window.location.search;
+   if (!currentLocation.includes("location=")) {
+       if (navigator.geolocation) {
+           var options = {
+               enableHighAccuracy: true,
+               timeout: 10000,
+               maximumAge: 0
+           };
+           navigator.geolocation.getCurrentPosition(showPosition, showError, options);
+       }
+   }
+   ```
 
-   `example: $TheUrlOfGetWeatherJson = "https://api.example.com/wearher/3.0/get?lat=40.4573&lon=-0.3425&lang=en&apikey=123456789&units=imperial";`
-   
-8.  After requesting the data, you can add an if isset to confirm whether the weather data has been obtained and prepare error information for the error page.
-9.  Then determine the description text of various weather conditions through functions.Here you can convert the returned weather data into more understandable text to help users read.
-10. Through `<?php echo ?>` in html.  Show corresponding weather data.Also you need write some css classes and make some components to beautify the page.
+3. **Setting Preferences via Cookies:**
+   Confirm user preferences such as units and language by checking the JSON data stored in cookies.
+   ```php
+   if (isset($_POST['units'])) {
+       $units = $_POST['units'];
+       $cookieData = isset($_COOKIE['CWC-Profile']) ? json_decode($_COOKIE['CWC-Profile'], true) : array();
+       $cookieData["units"] = $units;
 
-__The above describes how to obtain weather data and how to display weather data, which is the core logic of CWC (the displayed code is modified from the source code).__
+       if (isset($_POST['setDefault'])) {
+           $cookieExpiration = time() + (86400 * 90); // Setting cookie expiration
+           $cookieData["Expiration"] = date('Y-m-d H:i:s', $cookieExpiration);
+           $jsonSettings = json_encode($cookieData);
+           setcookie('CWC-Profile', $jsonSettings, $cookieExpiration, "/");
+       }
+   } else {
+       if (isset($_COOKIE['CWC-Profile'])) {
+           $cookieData = json_decode($_COOKIE['CWC-Profile'], true);
+           $units = isset($cookieData['units']) ? $cookieData['units'] : "metric";
+       } else {
+           $units = "metric";
+       }
+   }
+   ```
 
-__html&css:__
+4. **Building the Request URL:**
+   Construct the URL to request weather data, using various parameters such as location and units.
+   ```php
+   $weatherApiUrl = "https://api.example.com/weather/3.0/get?lat=40.4573&lon=-0.3425&lang=en&apikey=123456789&units=imperial";
+   ```
 
-We use flat and minimalist styles to design the front-end style. Right-angled borders, solid borders, window transition animations and press-and-hold transition animations are all features of CWC.
+5. **Processing Weather Data:**
+   After making the request, verify the received weather data and prepare for display, including error handling and translating weather conditions into user-friendly descriptions.
 
-`example: .cwc-btn {
-      border-radius: 0px !important;
-      border: 1px solid black;
-      height: 36px;
-      width: 297px;
-      font-size: 14px;
-      transition: background-color 0.3s, border-color 0.3s;
-      background-color: transparent;
-      color: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-      margin-bottom: 5px;
-    }
-    .cwc-btn:hover {
-      background-color: black;
-      color: white;
-    }`
-    
-`example:<iframe id="gameFrame" src="https://resource.caner.hk/get/game/dino/dino_with_title.html" height="200px" frameborder="0" scrolling="no" allowfullscreen class="cwc-game"></iframe>
-        <button id="gameButton" class="cwc-btn">玩 Chrome Dino 消遣一下</button>`
+6. **Displaying Weather Data:**
+   Use PHP within HTML to display the weather data dynamically, styled with CSS for an appealing presentation.
+
+### HTML & CSS Design:
+
+CWC adopts a flat and minimalist design aesthetic, featuring right-angled borders, solid lines, and smooth transition animations for a clean and modern user interface.
+
+```css
+.cwc-btn {
+    border-radius: 0px !important;
+    border: 1px solid black;
+    height: 36px;
+    width: 297px;
+    font-size: 14px;
+    transition: background-color 0.3s, border-color 0.3s;
+    background-color: transparent;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+.cwc-btn:hover {
+    background-color: black;
+    color: white;
+}
+```
+Interactive elements such as games are also integrated for a more engaging user experience.
+```html
+<iframe id="gameFrame" src="https://resource.caner.hk/get/game/dino/dino_with_title.html" height="200px" frameborder="0" scrolling="no" allowfullscreen class="cwc-game"></iframe>
+<button id="gameButton" class="cwc-btn">Play Chrome Dino for fun</button>
+```
+
 
 __screenshot:__
 ![Screenshot_20240203-041737_Caner_Weather](https://github.com/iMallpa/CWC-Caner-Weather-Channel/assets/104821296/bea0e167-b817-49bb-8bec-9bc9726cbb32)
