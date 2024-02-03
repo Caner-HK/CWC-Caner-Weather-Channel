@@ -179,6 +179,11 @@ Through this approach, CWC not only provides users with a feature-rich, easy-to-
 - [ ] Dt and historical weather
 - [ ] snackbar operation suggestions
 
+## License Information
+
+CWC does not utilize any open-source licenses, such as the MIT License or Apache License 2.0. Instead, it operates under a proprietary license issued by Caner HK, specifically designed for the CWC project. You can view the license here: [CWC License](https://github.com/iMallpa/CWC-Caner-Weather-Channel/blob/main/LICENSE).
+
+Please note that due to the stipulations of this license, there may be certain restrictions on how you can modify and distribute the CWC source code.
 
 
 
