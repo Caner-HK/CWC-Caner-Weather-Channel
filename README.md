@@ -13,14 +13,14 @@ The core functionality of CWC involves several steps to fetch and display weathe
 1. **API Key and Functions Importation:**
    Begin by including the necessary PHP files for the API key and functions.
    ```php
-   require './path/to/apikey.php';
-   include './path/to/functions.php';
+   require './path/to/example.php';
+   include './path/to/example.php';
    ```
 
 2. **Obtaining User Location:**
    Utilize [ipinfo.io](https://ipinfo.io/) to determine the user's IP address in the backend PHP code, and then use the [Google Maps Platform](https://mapsplatform.google.com/) to convert this IP into latitude and longitude coordinates.
    ```php
-   function getLocationByIP() {
+   function example() {
        $ip = $_SERVER['REMOTE_ADDR'];
        $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
        return $details->city;
@@ -32,9 +32,9 @@ The core functionality of CWC involves several steps to fetch and display weathe
    if (!currentLocation.includes("location=")) {
        if (navigator.geolocation) {
            var options = {
-               enableHighAccuracy: true,
-               timeout: 10000,
-               maximumAge: 0
+               enableHighAccuracy: example,
+               timeout: example,
+               maximumAge: example
            };
            navigator.geolocation.getCurrentPosition(showPosition, showError, options);
        }
@@ -46,21 +46,21 @@ The core functionality of CWC involves several steps to fetch and display weathe
    ```php
    if (isset($_POST['units'])) {
        $units = $_POST['units'];
-       $cookieData = isset($_COOKIE['CWC-Profile']) ? json_decode($_COOKIE['CWC-Profile'], true) : array();
+       $cookieData = isset($_COOKIE['example']) ? json_decode($_COOKIE['example'], true) : array();
        $cookieData["units"] = $units;
 
        if (isset($_POST['setDefault'])) {
            $cookieExpiration = time() + (86400 * 90); // Setting cookie expiration
-           $cookieData["Expiration"] = date('Y-m-d H:i:s', $cookieExpiration);
+           $cookieData["example"] = date('Y-m-d H:i:s', $cookieExpiration);
            $jsonSettings = json_encode($cookieData);
-           setcookie('CWC-Profile', $jsonSettings, $cookieExpiration, "/");
+           setcookie('example', $jsonSettings, $cookieExpiration, "/");
        }
    } else {
-       if (isset($_COOKIE['CWC-Profile'])) {
-           $cookieData = json_decode($_COOKIE['CWC-Profile'], true);
-           $units = isset($cookieData['units']) ? $cookieData['units'] : "metric";
+       if (isset($_COOKIE['example'])) {
+           $cookieData = json_decode($_COOKIE['example'], true);
+           $units = isset($cookieData['units']) ? $cookieData['units'] : "example";
        } else {
-           $units = "metric";
+           $units = "example";
        }
    }
    ```
@@ -68,7 +68,7 @@ The core functionality of CWC involves several steps to fetch and display weathe
 4. **Building the Request URL:**
    Construct the URL to request weather data, using various parameters such as location and units.
    ```php
-   $weatherApiUrl = "https://api.example.com/weather/3.0/get?lat=40.4573&lon=-0.3425&lang=en&apikey=123456789&units=imperial";
+   $weatherApiUrl = "https://api.example.com/weather/example/get?lat=40.4573&lon=-0.3425&lang=en&apikey=123456789&units=imperial";
    ```
 
 5. **Processing Weather Data:**
@@ -103,14 +103,15 @@ CWC adopts a flat and minimalist design aesthetic, featuring right-angled border
 }
 ```
 ```html
-                    <div>
-                        <span class="cwc-text-small">降水概率: </span><br><strong class="cwc-head-daily"><?php echo $day['pop'] * 100; ?></strong><strong>%</strong><br>
-                        <?php if (isset($day['rain'])): ?>
-                            <div><span class="cwc-subhead"><strong>雨量: <?php echo $day['rain']; ?> mm</strong></span></div>
-                        <?php endif; ?>
-                        <span class="cwc-text-small">湿度: <strong><?php echo $day['humidity']; ?>% • <?php echo getHumidityDescription($day['humidity']); ?></strong></span><br>
-                        <span class="cwc-text-small">气压: <strong><?php echo $day['pressure']; ?> hPa • <?php echo getPressureDescription($day['pressure']); ?></strong></span><br>
-                    </div>
+<div>
+    <span class="cwc-text-small">example: </span><br><strong class="cwc-head-daily"><?php echo $example['example'] * 100; ?></strong><strong>%</strong><br>
+    <?php if (isset($example['example'])): ?>
+    <div><span class="cwc-subhead"><strong>example: <?php echo $example['example']; ?> mm</strong></span></div>
+    <?php endif; ?>
+    <span class="cwc-text-small">example: <strong><?php echo $example['example']; ?>% • <?php echo getDescription($example['example']); ?></strong></span><br>
+    <span class="cwc-text-small">example: <strong><?php echo $example['example']; ?> hPa • <?php echo getDescription($example['example']); ?></strong></span><br>
+</div>
+
 ```
 Interactive elements such as games are also integrated for a more engaging user experience.
 ```html
