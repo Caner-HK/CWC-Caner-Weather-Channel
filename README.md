@@ -102,6 +102,16 @@ CWC adopts a flat and minimalist design aesthetic, featuring right-angled border
     color: white;
 }
 ```
+```html
+                    <div>
+                        <span class="cwc-text-small">降水概率: </span><br><strong class="cwc-head-daily"><?php echo $day['pop'] * 100; ?></strong><strong>%</strong><br>
+                        <?php if (isset($day['rain'])): ?>
+                            <div><span class="cwc-subhead"><strong>雨量: <?php echo $day['rain']; ?> mm</strong></span></div>
+                        <?php endif; ?>
+                        <span class="cwc-text-small">湿度: <strong><?php echo $day['humidity']; ?>% • <?php echo getHumidityDescription($day['humidity']); ?></strong></span><br>
+                        <span class="cwc-text-small">气压: <strong><?php echo $day['pressure']; ?> hPa • <?php echo getPressureDescription($day['pressure']); ?></strong></span><br>
+                    </div>
+```
 Interactive elements such as games are also integrated for a more engaging user experience.
 ```html
 <iframe id="gameFrame" src="https://resource.caner.hk/get/game/dino/dino_with_title.html" height="200px" frameborder="0" scrolling="no" allowfullscreen class="cwc-game"></iframe>
