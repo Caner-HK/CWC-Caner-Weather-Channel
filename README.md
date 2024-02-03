@@ -1,5 +1,5 @@
 # CWC-Caner-Weather-Channel
-   <img style="height: 42px;" src="https://resource.caner.hk/get/logo/caner-logo-white.png">
+
 Caner Weather Channel (CWC) is a weather website and application designed and developed by Caner HK. You can visit cwc on https://weather.caner.hk/
 
 >Please read LICENSE before using release and pre-release files
