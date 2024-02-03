@@ -188,6 +188,14 @@ For those interested in exploring the archived historical versions of CWC, they 
 
 Stay tuned for updates and improvements as we continue to develop and enhance the CWC experience.
 
+## Usage and Feature Guide
+
+CWC is continuously evolving, with new features and updates being introduced periodically. To help users navigate these changes and make the most out of the application, a comprehensive usage and feature guide is available. Please note that due to ongoing updates, the content of the guide may change over time.
+
+For detailed instructions and the latest information on how to use CWC and its features, please visit the following link: [CWC Usage and Feature Guide](https://b23.tv/BBHX0DB).
+
+Stay informed about the latest developments to enhance your experience with CWC.
+
 
 ## License Information
 
