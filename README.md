@@ -6,11 +6,11 @@ This branch is dedicated to integrating the Apple Weather Kit version with CWC (
 
 ## CWC AWK Overview:
 
-This version distinguishes itself from the main version by utilizing the **Apple Weather Kit Rest API** for weather data retrieval, whereas the main version employs **Open Weather**.
+This version distinguishes itself from the main version by utilizing the [**Apple Weather Kit Rest API**](https://developer.apple.com/documentation/weatherkitrestapi) for weather data retrieval, whereas the main version employs [**Open Weather**](openweathermap.org).
 
 ### Core Logic:
 
-To use WeatherKit, you must have an Apple developer account and generate your JWT (JSON Web Token) according to Apple's developer documentation.
+To use WeatherKit, you must have an Apple developer account and generate your [JWT (JSON Web Token)](https://en.m.wikipedia.org/wiki/JSON_Web_Token) according to Apple's developer documentation.
 
 1. **Geolocation Conversion**: After configuring the Google Maps API and your JWT, enter the desired location on the page. The backend PHP code will convert this into latitude and longitude coordinates.
 
@@ -63,6 +63,10 @@ To use WeatherKit, you must have an Apple developer account and generate your JW
 
 - [x] **Weather Query and Display**
 - [x] **Search Weather**
+
+## Onine Demo :
+
+If you'd like to try the online demo, [click here](https://weather.caner.hk/research/awk/v1)
 
 ## License Information:
 
