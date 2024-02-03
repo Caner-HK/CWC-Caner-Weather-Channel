@@ -151,8 +151,8 @@ CWC integrates a variety of third-party products and services to enhance its fun
 - **The Weather Company** (temporarily discontinued): Previously offered high-quality weather forecasting data.
 - **ipinfo**: Utilized for obtaining geographical location information through the user's IP address. [ipinfo.io](https://ipinfo.io/)
 - **Chart.js**: Generates weather data charts for intuitive data visualization. [Chart.js](https://www.chartjs.org/)
-- **Amap**: Offers map resources and services. [Amap](https://lbs.amap.com/)
-- **Caner Resources**: Provides additional resources and data services. [r.Caner.hk](https://r.caner.hk/)
+- **AMap**: Offers map resources and services. [AMap](https://lbs.amap.com/)
+- **Caner Resource**: Provides additional resources and data services. [Caner Resource](https://r.caner.hk/)
 
 ### Compatibility and Performance
 
