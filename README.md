@@ -38,10 +38,10 @@ __Core logic:__
 4. Then build the request URL (using curl_request) and store the requested data in various variables.
 
    `example: $TheUrlOfGetWeatherJson = "https://api.example.com/wearher/3.0/get?lat=40.4573&lon=-0.3425&lang=en&apikey=123456789&units=imperial";`
-
-6.After requesting the data, you can add an if isset to confirm whether the weather data has been obtained and prepare error information for the error page.
-7. Then determine the description text of various weather conditions through functions.Here you can convert the returned weather data into more understandable text to help users read.
-8. Through `<?php echo ?>` in html.  Show corresponding weather data.Also you need write some css classes and make some components to beautify the page.
+   
+8.  After requesting the data, you can add an if isset to confirm whether the weather data has been obtained and prepare error information for the error page.
+9.  Then determine the description text of various weather conditions through functions.Here you can convert the returned weather data into more understandable text to help users read.
+10. Through `<?php echo ?>` in html.  Show corresponding weather data.Also you need write some css classes and make some components to beautify the page.
 
 __The above describes how to obtain weather data and how to display weather data, which is the core logic of CWC (the displayed code is modified from the source code).__
 
