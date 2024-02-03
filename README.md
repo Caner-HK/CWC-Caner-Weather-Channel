@@ -128,14 +128,41 @@ document.getElementById('gameButton').addEventListener('click', function() {
     }
 });
 ```
+## Technology Stack:
+
+CWC (Caner Weather Channel) is a comprehensive weather information application designed to provide accurate weather forecasts and information to users. The project is specially optimized to run on low-memory devices, ensuring wide accessibility and compatibility.
+
+### Frontend Design
+
+- **No Framework Dependency**: The frontend of CWC is purely crafted using HTML tags and CSS styling, with no dependency on any frontend frameworks, ensuring good performance on low-RAM devices and excellent compatibility.
+- **Responsive Layout**: With flexible CSS, CWC achieves a responsive layout that adapts to various screen sizes and devices.
+
+### Backend Implementation
+
+- **Developed with PHP**: The backend logic is implemented in PHP, including functionalities such as acquiring geographical location, IP geolocation, setting request units, sending weather data requests, timezone conversion, and translating weather conditions into language descriptions.
+- **Data Processing**: The backend handles data acquisition and aggregation from multiple sources, provides search suggestions, and implements the storage and retrieval of user settings.
+
+### Integration of Technologies and Services
+
+CWC integrates a variety of third-party products and services to enhance its functionality and user experience:
+
+- **Google Maps Platforms**: Used for recognizing and converting geographical locations, as well as implementing map functionalities. [Google Maps Platforms](https://mapsplatform.google.com/)
+- **Google Analysis**: Employed for analyzing website traffic and user behavior to optimize the user experience. [Google Analytics](https://analytics.google.com/)
+- **Open Weather**: Provides real-time weather data and forecasts. [OpenWeather](https://openweathermap.org/)
+- **The Weather Company** (temporarily discontinued): Previously offered high-quality weather forecasting data.
+- **ipinfo**: Utilized for obtaining geographical location information through the user's IP address. [ipinfo.io](https://ipinfo.io/)
+- **Chart.js**: Generates weather data charts for intuitive data visualization. [Chart.js](https://www.chartjs.org/)
+- **Amap**: Offers map resources and services. [Amap](https://lbs.amap.com/)
+- **Caner Resources**: Provides additional resources and data services. [r.Caner.hk](https://r.caner.hk/)
+
+### Compatibility and Performance
+
+CWC is specially optimized to ensure good performance and user experience on a wide range of devices, including those with low RAM. The project's design takes compatibility and accessibility into account, serving a diverse user base with varying levels of technology access and device capabilities.
+
+Through this approach, CWC not only provides users with a feature-rich, easy-to-use weather query platform but also demonstrates how to effectively combine traditional techniques with modern services to create applications with high performance and compatibility in modern web development.
 
 
-
-__screenshot:__
-![Screenshot_20240203-041737_Caner_Weather](https://github.com/iMallpa/CWC-Caner-Weather-Channel/assets/104821296/bea0e167-b817-49bb-8bec-9bc9726cbb32)
-
-
-## Function:
+## Features:
 - [x] Weather query and display
 - [x] Location search suggestions
 - [x] Google Maps and Map pin 📍
