@@ -173,22 +173,27 @@ Through this approach, CWC not only provides users with a feature-rich, easy-to-
 
 
 ## Features:
-- [x] Weather query and display
-- [x] Location search suggestions
-- [x] Google Maps and Map pin 📍
-- [x] Weather data chart
-- [x] Set units and save units
-- [x] Cookies management
-- [x] Diverse data display
-- [x] Error handling function
-- [ ] multi-language
-- [ ] Recommendations provided by GPT3.5
-- [ ] star city
-- [ ] Personal information display
-- [ ] Large screen adaptation
-- [ ] Switch map service provider
-- [ ] Dt and historical weather
-- [ ] snackbar operation suggestions
+
+- [x] **Weather Query and Display**
+- [x] **Location Search Suggestions**
+- [x] **Google Maps and Map Pin 📍**
+- [x] **Weather Data Chart**
+- [x] **Units Setting and Saving**
+- [x] **Cookies Management**
+- [x] **Diverse Data Display**
+- [x] **Error Handling**
+
+### Upcoming Features
+
+- [ ] **Multi-language**
+- [ ] **Recommendations by GPT-3.5**
+- [ ] **Starred Cities**
+- [ ] **Personal Information Display**
+- [ ] **Large Screen Adaptation**
+- [ ] **Map Service Provider Switch**
+- [ ] **Dt (Unix Timestamp) Historical Weather**
+- [ ] **Snackbar Suggestions**
+
 
 ## Usage and Guide:
 
