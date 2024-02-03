@@ -207,6 +207,13 @@ For those interested in exploring the archived historical versions of CWC, they 
 
 Stay tuned for updates and improvements as we continue to develop and enhance the CWC experience.
 
+## Developer Research
+
+CWC offers source code specifically for developer research, which can be downloaded from the release section. 
+>Note that the Developer Research source code differs from the actual CWC release page. It is designed for the purpose of developing features and researching improvements and does not include any API keys.
+
+Download the source code from the [Release page](https://github.com/Caner-HK/CWC-Caner-Weather-Channel/releases/tag/Developer_Research).
+
 ## License Information:
 
 CWC does not utilize any open-source licenses, such as the MIT License or Apache License 2.0. Instead, it operates under a proprietary license issued by Caner HK, specifically designed for the CWC project. You can view the license here: [CWC License](https://github.com/iMallpa/CWC-Caner-Weather-Channel/blob/main/LICENSE).
