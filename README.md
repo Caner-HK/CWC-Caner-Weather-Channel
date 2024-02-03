@@ -4,7 +4,7 @@ Caner Weather Channel (CWC) is a comprehensive weather website and application d
 
 >Please ensure you read the LICENSE document before using any release and pre-release files.
 
-## CWC Overview
+## CWC Overview:
 
 ### Core Logic:
 
@@ -132,11 +132,11 @@ document.getElementById('gameButton').addEventListener('click', function() {
 
 CWC (Caner Weather Channel) is a comprehensive weather information application designed to provide accurate weather forecasts and information to users. The project is specially optimized to run on low-memory devices, ensuring wide accessibility and compatibility.
 
-### Frontend Design
+### Frontend Design:
 
 - **No Framework Dependency**: The frontend of CWC is purely crafted using HTML tags and CSS styling, with no dependency on any frontend frameworks, ensuring good performance on low-RAM devices and excellent compatibility.
 
-### Backend Implementation
+### Backend Implementation:
 
 - **Developed with PHP**: The backend logic is implemented in PHP, including functionalities such as acquiring geographical location, IP geolocation, setting request units, sending weather data requests, timezone conversion, and translating weather conditions into language descriptions.
 - **Data Processing**: The backend handles data acquisition and aggregation from multiple sources, provides search suggestions, and implements the storage and retrieval of user settings.
@@ -179,7 +179,15 @@ Through this approach, CWC not only provides users with a feature-rich, easy-to-
 - [ ] Dt and historical weather
 - [ ] snackbar operation suggestions
 
-## Changelog
+## Usage and Guide:
+
+CWC is continuously evolving, with new features and updates being introduced periodically. To help users navigate these changes and make the most out of the application, a comprehensive usage and feature guide is available. Please note that due to ongoing updates, the content of the guide may change over time.
+
+For detailed instructions and the latest information on how to use CWC and its features, please visit the following link: [CWC Usage and Feature Guide](https://b23.tv/BBHX0DB).
+
+Stay informed about the latest developments to enhance your experience with CWC.
+
+## Changelog:
 
 The current accessible version of CWC is Version 3.x.x . Upon the completion of this build, we will introduce a completely restructured new version (4.x
 .x) of the application.
@@ -188,16 +196,7 @@ For those interested in exploring the archived historical versions of CWC, they 
 
 Stay tuned for updates and improvements as we continue to develop and enhance the CWC experience.
 
-## Usage and Feature Guide
-
-CWC is continuously evolving, with new features and updates being introduced periodically. To help users navigate these changes and make the most out of the application, a comprehensive usage and feature guide is available. Please note that due to ongoing updates, the content of the guide may change over time.
-
-For detailed instructions and the latest information on how to use CWC and its features, please visit the following link: [CWC Usage and Feature Guide](https://b23.tv/BBHX0DB).
-
-Stay informed about the latest developments to enhance your experience with CWC.
-
-
-## License Information
+## License Information:
 
 CWC does not utilize any open-source licenses, such as the MIT License or Apache License 2.0. Instead, it operates under a proprietary license issued by Caner HK, specifically designed for the CWC project. You can view the license here: [CWC License](https://github.com/iMallpa/CWC-Caner-Weather-Channel/blob/main/LICENSE).
 
