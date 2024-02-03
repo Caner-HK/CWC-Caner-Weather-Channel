@@ -2,7 +2,7 @@
 
 Caner Weather Channel (CWC) is a comprehensive weather website and application developed by Caner HK. For more information and to access the service, visit [CWC](https://weather.caner.hk/).
 
-**Please ensure you read the LICENSE document before using any release and pre-release files.**
+>Please ensure you read the LICENSE document before using any release and pre-release files.**
 
 ## CWC Overview
 
@@ -107,6 +107,28 @@ Interactive elements such as games are also integrated for a more engaging user 
 <iframe id="gameFrame" src="https://resource.caner.hk/get/game/dino/dino_with_title.html" height="200px" frameborder="0" scrolling="no" allowfullscreen class="cwc-game"></iframe>
 <button id="gameButton" class="cwc-btn">Play Chrome Dino for fun</button>
 ```
+Control the display and closing of Game Iframe and the text switching of buttons through JavaScript code
+```javascript
+document.getElementById('gameButton').addEventListener('click', function() {
+    var gameFrame = document.getElementById('gameFrame');
+    var gameButton = document.getElementById('gameButton');
+
+    if (gameFrame.style.maxHeight === '0px') {
+        gameFrame.style.maxHeight = '200px';
+        setTimeout(function() {
+            gameFrame.style.opacity = '1';
+        }, 500);
+        gameButton.textContent = '关闭 Chrome Dino 游戏';
+    } else {
+        gameFrame.style.opacity = '0';
+        setTimeout(function() {
+            gameFrame.style.maxHeight = '0px';
+        }, 500);
+        gameButton.textContent = '玩 Chrome Dino 消遣一下';
+    }
+});
+```
+
 
 
 __screenshot:__
