@@ -179,6 +179,15 @@ Through this approach, CWC not only provides users with a feature-rich, easy-to-
 - [ ] Dt and historical weather
 - [ ] snackbar operation suggestions
 
+## Changelog
+
+The current accessible version of CWC is Version 3. Upon the completion of this build, we will introduce a completely restructured new version of the application.
+
+For those interested in exploring the archived historical versions of CWC, they are available on the CWC Archive page. Visit [CWC Archive](https://weather.caner.hk/archive) to access these versions.
+
+Stay tuned for updates and improvements as we continue to develop and enhance the CWC experience.
+
+
 ## License Information
 
 CWC does not utilize any open-source licenses, such as the MIT License or Apache License 2.0. Instead, it operates under a proprietary license issued by Caner HK, specifically designed for the CWC project. You can view the license here: [CWC License](https://github.com/iMallpa/CWC-Caner-Weather-Channel/blob/main/LICENSE).
