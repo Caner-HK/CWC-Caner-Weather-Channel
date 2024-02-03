@@ -135,7 +135,6 @@ CWC (Caner Weather Channel) is a comprehensive weather information application d
 ### Frontend Design
 
 - **No Framework Dependency**: The frontend of CWC is purely crafted using HTML tags and CSS styling, with no dependency on any frontend frameworks, ensuring good performance on low-RAM devices and excellent compatibility.
-- **Responsive Layout**: With flexible CSS, CWC achieves a responsive layout that adapts to various screen sizes and devices.
 
 ### Backend Implementation
 
