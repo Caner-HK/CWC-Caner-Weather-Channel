@@ -61,8 +61,8 @@ To use WeatherKit, you must have an Apple developer account and generate your JW
 
 ## Features:
 
-- [x] **Weather Query and Display**: Utilize WeatherKit for accurate weather information.
-- [x] **Search Weather**: Seamlessly search for weather details using Apple's WeatherKit.
+- [x] **Weather Query and Display**
+- [x] **Search Weather**
 
 ## License Information:
 
