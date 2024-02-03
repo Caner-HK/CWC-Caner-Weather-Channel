@@ -181,7 +181,8 @@ Through this approach, CWC not only provides users with a feature-rich, easy-to-
 
 ## Changelog
 
-The current accessible version of CWC is Version 3. Upon the completion of this build, we will introduce a completely restructured new version of the application.
+The current accessible version of CWC is Version 3.x.x . Upon the completion of this build, we will introduce a completely restructured new version (4.x
+.x) of the application.
 
 For those interested in exploring the archived historical versions of CWC, they are available on the CWC Archive page. Visit [CWC Archive](https://weather.caner.hk/archive) to access these versions.
 
