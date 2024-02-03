@@ -1,4 +1,4 @@
-# Caner Weather Channel (CWC)
+# CWC Research Branch - WeatherKit
 
 Caner Weather Channel (CWC) is a comprehensive weather website and application developed by Caner HK. For more information and to access the service, visit [CWC](https://weather.caner.hk/).
 
