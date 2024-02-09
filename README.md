@@ -182,15 +182,16 @@ Through this approach, CWC not only provides users with a feature-rich, easy-to-
 - [x] **Cookies Management**
 - [x] **Diverse Data Display**
 - [x] **Error Handling**
+- [x] **Recommendations by GPT-4 Turbo**
+- [x] **Map Service Provider (GMap/A
+Map) Switch**
 
 ### Upcoming Features
 
 - [ ] **Multi-language**
-- [ ] **Recommendations by GPT-3.5**
 - [ ] **Starred Cities**
 - [ ] **Personal Information Display**
 - [ ] **Large Screen Adaptation**
-- [ ] **Map Service Provider Switch**
 - [ ] **Dt (Unix Timestamp) Historical Weather**
 - [ ] **Snackbar Suggestions**
 
