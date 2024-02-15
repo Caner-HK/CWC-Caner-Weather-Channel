@@ -6,7 +6,7 @@ We are committed to maintaining the security of our web application. This table 
 
 | Version        | Supported          | Information                         | Access |
 | -------------- | ------------------ | ----------------------------------- | --------|
-| 3.5.x          | :white_check_mark: | The latest version (Continually updated) |[Link](https://weather.caner.hk) |
+| 3.6.x          | :white_check_mark: | The latest version (Continually updated) |[Link](https://weather.caner.hk) |
 | 2.x.x          | :x:                | Deprecated, archived                | [Link](https://weather.caner.hk/archive/v2) |
 | 1.x.x          | :x:                | Deprecated, archived                | [Link](https://weather.caner.hk/archive/v1) |
 | Dev Research   | :white_check_mark: | Source code of Release Section (actively supported for security updates) |[Link](https://github.com/Caner-HK/CWC-Caner-Weather-Channel/releases/tag/Developer_Research) |
