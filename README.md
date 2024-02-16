@@ -158,6 +158,7 @@ CWC integrates a variety of third-party products and services to enhance its fun
 
 - **Google Maps Platforms**: Used for recognizing and converting geographical locations, as well as implementing map functionalities. [Google Maps Platforms](https://mapsplatform.google.com/)
 - **Google Analysis**: Employed for analyzing website traffic and user behavior to optimize the user experience. [Google Analytics](https://analytics.google.com/)
+- **Google Translate**: Provide localized translation services.
 - **Open Weather**: Provides real-time weather data and forecasts. [OpenWeather](https://openweathermap.org/)
 - **The Weather Company** (temporarily discontinued): Previously offered high-quality weather forecasting data.
 - **ipinfo**: Utilized for obtaining geographical location information through the user's IP address. [ipinfo.io](https://ipinfo.io/)
